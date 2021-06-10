@@ -1,0 +1,1 @@
+NSFileHandle+SafeOperations.h
