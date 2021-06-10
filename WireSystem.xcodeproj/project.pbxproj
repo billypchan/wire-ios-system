@@ -145,7 +145,7 @@
 				A94B2339266F9ED800D89927 /* Package.swift */,
 				54F6FD891B31BB5A000EC9BB /* README.md */,
 				5473E7D01B31A9C300C6A937 /* Resources */,
-				5473E7C61B31A95A00C6A937 /* Source */,
+				5473E7C61B31A95A00C6A937 /* Sources */,
 				54A327381B99A3650004EB95 /* Tests */,
 				3ECC34E61AD433520089FD4B /* Products */,
 			);
@@ -174,7 +174,42 @@
 			path = "zmc-config";
 			sourceTree = "<group>";
 		};
-		5473E7C61B31A95A00C6A937 /* Source */ = {
+		5473E7C61B31A95A00C6A937 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2691826720D2800663C74 /* WireSystem */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5473E7D01B31A9C300C6A937 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09F186211B68FD52007A3DA6 /* WireSystem-Info.plist */,
+				5473E7D11B31A9C300C6A937 /* Configurations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5473E7D11B31A9C300C6A937 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				5454D7481EF4022F00E3BBCB /* zmc-config */,
+				5473E7E41B31AA2600C6A937 /* version.xcconfig */,
+				092758691B70E68F00AD5A78 /* WireSystem.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		54A327381B99A3650004EB95 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2691926720DAE00663C74 /* WireSystemTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A9E2691826720D2800663C74 /* WireSystem */ = {
 			isa = PBXGroup;
 			children = (
 				8701221520F64171001E6342 /* Cache.swift */,
@@ -206,29 +241,10 @@
 				5E8AA1FF223BC8CE005F5E07 /* NSFileHandle+SafeOperations.h */,
 				5E8AA200223BC8CE005F5E07 /* NSFileHandle+SafeOperations.m */,
 			);
-			path = Source;
+			path = WireSystem;
 			sourceTree = "<group>";
 		};
-		5473E7D01B31A9C300C6A937 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				09F186211B68FD52007A3DA6 /* WireSystem-Info.plist */,
-				5473E7D11B31A9C300C6A937 /* Configurations */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5473E7D11B31A9C300C6A937 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				5454D7481EF4022F00E3BBCB /* zmc-config */,
-				5473E7E41B31AA2600C6A937 /* version.xcconfig */,
-				092758691B70E68F00AD5A78 /* WireSystem.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
-		54A327381B99A3650004EB95 /* Tests */ = {
+		A9E2691926720DAE00663C74 /* WireSystemTests */ = {
 			isa = PBXGroup;
 			children = (
 				8701221720F641A4001E6342 /* CacheTests.swift */,
@@ -246,7 +262,7 @@
 				54FF9F151C4914D100B29ACE /* ZMSTestDetectionTests.m */,
 				54C0CC421C9C7862000A9286 /* ZMSAssertionTests.m */,
 			);
-			path = Tests;
+			path = WireSystemTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,7 +500,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wire.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Test-Bridging.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/WireSystemTests/Test-Bridging.h";
 			};
 			name = Debug;
 		};
@@ -495,7 +511,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wire.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Test-Bridging.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/WireSystemTests/Test-Bridging.h";
 			};
 			name = Release;
 		};
