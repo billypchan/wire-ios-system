@@ -19,12 +19,13 @@ let package = Package(
         .target(
            name: "WireSystem-ObjC",
            dependencies: [],
-           path: "WireSystem/",
-           exclude: ["SwiftSources/"]
+           path: "Sources/WireSystem/",
+           exclude: ["Sources/SwiftSources/"]
         ),
         .target(
             name: "WireSystem",
-            dependencies: ["WireSystem-ObjC"]
+            dependencies: ["WireSystem-ObjC"],
+            path: "Sources/SwiftSources/"
         ),
         .testTarget(
             name: "WireSystem Tests",
