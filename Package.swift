@@ -12,13 +12,15 @@ let package = Package(
             targets: ["WireSystem"]),
     ],
     dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
         .target(
            name: "WireSystem-ObjC",
            dependencies: [],
            path: "Sources/WireSystem/",
-           exclude: ["Sources/SwiftSources/"]
+           exclude: ["Sources/SwiftSources"]
         ),
         .target(
             name: "WireSystem",
