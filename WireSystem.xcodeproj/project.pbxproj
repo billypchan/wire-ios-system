@@ -177,6 +177,7 @@
 		5473E7C61B31A95A00C6A937 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A9C82F4626777D1F00DE2CF5 /* SwiftSources */,
 				A9E2691826720D2800663C74 /* WireSystem */,
 			);
 			path = Sources;
@@ -209,27 +210,34 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A9E2691826720D2800663C74 /* WireSystem */ = {
+		A9C82F4626777D1F00DE2CF5 /* SwiftSources */ = {
 			isa = PBXGroup;
 			children = (
 				8701221520F64171001E6342 /* Cache.swift */,
-				54180BD61F459DCF0020D2BD /* MemoryReferenceDebugger.h */,
 				54180BD71F459DCF0020D2BD /* MemoryReferenceDebugger.swift */,
-				54F5148B1B7377CA00FACDAA /* ZMSGroupQueue.h */,
-				548662511B344CB400298EFD /* ZMSDefines.h */,
-				548662451B344AAB00298EFD /* ZMSAsserts.h */,
 				54DB81641DBFACE800AF495D /* CircularArray.swift */,
 				5442AB7E1CA29CC000BC099C /* ZMSAsserts.swift */,
-				54C0CC3F1C9C7635000A9286 /* ZMSAsserts.m */,
-				5473E7C71B31A95A00C6A937 /* WireSystem.h */,
-				096A3A1C1B67CEF700565001 /* ZMSLogging.h */,
-				096A3A1D1B67CEF700565001 /* ZMSLogging.m */,
 				F1670FAD22A7C5F500BC6811 /* SanitizedString.swift */,
 				F19E554422AA8748005C792D /* SafeForLoggingStringConvertible.swift */,
 				096A3A1E1B67CEF700565001 /* ZMSLog.swift */,
 				54DB81621DBF66CF00AF495D /* ZMSLog+Levels.swift */,
 				54D573691DBFBAFA00D6C2C4 /* ZMSLog+Recording.swift */,
 				D59F3A1A206A448F0023474F /* DispatchQueue+ZMSDispatchGroup.swift */,
+			);
+			path = SwiftSources;
+			sourceTree = "<group>";
+		};
+		A9E2691826720D2800663C74 /* WireSystem */ = {
+			isa = PBXGroup;
+			children = (
+				54180BD61F459DCF0020D2BD /* MemoryReferenceDebugger.h */,
+				54F5148B1B7377CA00FACDAA /* ZMSGroupQueue.h */,
+				548662511B344CB400298EFD /* ZMSDefines.h */,
+				548662451B344AAB00298EFD /* ZMSAsserts.h */,
+				54C0CC3F1C9C7635000A9286 /* ZMSAsserts.m */,
+				5473E7C71B31A95A00C6A937 /* WireSystem.h */,
+				096A3A1C1B67CEF700565001 /* ZMSLogging.h */,
+				096A3A1D1B67CEF700565001 /* ZMSLogging.m */,
 				54F249C61BB9242900040600 /* ZMSDispatchGroup.h */,
 				54F249C71BB9242900040600 /* ZMSDispatchGroup.m */,
 				54F9BC4B1C48F55900BC09DB /* ZMSTestDetection.h */,
