@@ -12,8 +12,6 @@ let package = Package(
             targets: ["WireSystem"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -22,11 +20,11 @@ let package = Package(
            path: "Sources/WireSystem/",
            exclude: ["Sources/SwiftSources/"]
         ),
-        .target(
-            name: "WireSystem",
-            dependencies: ["WireSystem-ObjC"],
-            path: "Sources/SwiftSources/"
-        ),
+//        .target(
+//            name: "WireSystem",
+//            dependencies: ["WireSystem-ObjC"],
+//            path: "Sources/SwiftSources/"
+//        ),
         .testTarget(
             name: "WireSystem Tests",
             dependencies: ["WireSystem"]),
