@@ -16,9 +16,9 @@ let package = Package(
     targets: [
         .target(
            name: "WireSystem-ObjC",
-           dependencies: [],
-           path: "./Sources/WireSystem/",
-           exclude: ["./Sources/SwiftSources/"]
+//           dependencies: [],
+//           path: "Sources/WireSystem/",
+//           exclude: ["Sources/SwiftSources/"]
         ),
 //        .target(
 //            name: "WireSystem",
