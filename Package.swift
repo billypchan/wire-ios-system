@@ -21,9 +21,9 @@ let package = Package(
            dependencies: [],
            path: "WireSystem/",
            exclude: ["SwiftSources"],
-           cSettings: [
+           //cSettings: [
 //              .headerSearchPath("Internal"), // 5
-           ]
+           //]
         ),
         .target(
             name: "WireSystem",
