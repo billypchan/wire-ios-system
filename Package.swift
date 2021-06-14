@@ -20,7 +20,7 @@ let package = Package(
            name: "WireSystem-ObjC",
            dependencies: [],
            path: "WireSystem/",
-           exclude: ["SwiftSources"]
+           exclude: ["SwiftSources/"]
         ),
         .target(
             name: "WireSystem",
