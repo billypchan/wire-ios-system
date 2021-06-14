@@ -16,15 +16,15 @@ let package = Package(
     targets: [
         .target(
            name: "WireSystem-ObjC",
-//           dependencies: [],
-//           path: "Sources/WireSystem/",
-//           exclude: ["Sources/SwiftSources/"]
+           dependencies: [],
+           path: "Sources/WireSystem/",
+           exclude: ["Sources/SwiftSources/"]
         ),
-//        .target(
-//            name: "WireSystem",
-//            dependencies: ["WireSystem-ObjC"],
-//            path: "Sources/SwiftSources/"
-//        ),
+        .target(
+            name: "WireSystem",
+            dependencies: ["WireSystem-ObjC"],
+            path: "Sources/SwiftSources/"
+        ),
         .testTarget(
             name: "WireSystem Tests",
             dependencies: ["WireSystem"]),
