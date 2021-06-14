@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "WireSystem",
             dependencies: ["WireSystem-ObjC"],
-            path: "SwiftSources"
+            path: "SwiftSources/"
         ),
         .testTarget(
             name: "WireSystem Tests",
