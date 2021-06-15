@@ -19,7 +19,7 @@ let package = Package(
         .binaryTarget(
                     name: "WireSystem",
                     url: "https://github.com/billypchan/wire-ios-system/releases/download/32.0.21/WireSystem.xcframework.zip",
-                    checksum: "4c45de069f2b959e972fe567337fe82ae9d3b47ca7aa46fc0e09e77dfbd7f5ea"),
+                    checksum: "3e1e5e0e7d70aac0d19ead21c0912e8e1ad74076dc3935546d7d7d9b687a9379"),
 //        .target(
 //            name: "WireSystem",
 //            dependencies: []),
