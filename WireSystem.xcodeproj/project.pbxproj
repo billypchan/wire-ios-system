@@ -112,6 +112,7 @@
 		5E8AA200223BC8CE005F5E07 /* NSFileHandle+SafeOperations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+SafeOperations.m"; sourceTree = "<group>"; };
 		8701221520F64171001E6342 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		8701221720F641A4001E6342 /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		A94B2339266F9ED800D89927 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D59F3A1A206A448F0023474F /* DispatchQueue+ZMSDispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+ZMSDispatchGroup.swift"; sourceTree = "<group>"; };
 		D59F3A1C206A47E80023474F /* DispatchQueueHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelperTests.swift; sourceTree = "<group>"; };
 		F1670FAD22A7C5F500BC6811 /* SanitizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanitizedString.swift; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		3ECC34C31AD430BB0089FD4B = {
 			isa = PBXGroup;
 			children = (
+				A94B2339266F9ED800D89927 /* Package.swift */,
 				54F6FD891B31BB5A000EC9BB /* README.md */,
 				5473E7D01B31A9C300C6A937 /* Resources */,
 				5473E7C61B31A95A00C6A937 /* Source */,
