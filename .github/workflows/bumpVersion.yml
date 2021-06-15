@@ -25,7 +25,10 @@ jobs:
         # process version.xcconfig
         curl --silent https://raw.githubusercontent.com/wireapp/wire-ios-shared-resources/master/Scripts/updateVersionXcconfig.swift --output updateVersionXcconfig.swift
         chmod +x updateVersionXcconfig.swift
-        swift updateVersionXcconfig.swift ${{ secrets.DISPATCH_SECRET }} ./Resources/Configurations/version.xcconfig ${{steps.dry_run.outputs.new_tag}}
+        swift updateVersionXcconfig.swift ./Resources/Configurations/version.xcconfig ${{steps.dry_run.outputs.new_tag}}
         rm updateVersionXcconfig.swift
         
-        cat ./Resources/Configurations/version.xcconfig
+        git add .
+        git commit -m"update version.xcconfig for '${{steps.dry_run.outputs.new_tag}}'"
+        git push
+
