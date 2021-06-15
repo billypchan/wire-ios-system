@@ -20,4 +20,5 @@ jobs:
         DRY_RUN: true
         
     - name: update version.xcconfig
+      run:
         echo ${{join(steps.dry_run.outputs.*, '\n')}}
