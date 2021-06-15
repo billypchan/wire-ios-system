@@ -28,6 +28,7 @@ jobs:
         swift updateVersionXcconfig.swift ./Resources/Configurations/version.xcconfig ${{steps.dry_run.outputs.new_tag}}
         rm updateVersionXcconfig.swift
         
+        git config --global user.email "iosx@wire.com"
         git add .
         git commit -m"update version.xcconfig for '${{steps.dry_run.outputs.new_tag}}'"
         git push
