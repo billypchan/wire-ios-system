@@ -19,10 +19,12 @@ jobs:
         RELEASE_BRANCHES: develop
         DEFAULT_BUMP: patch
         DRY_RUN: true
+        VERBOSE: true
         
     - name: update version.xcconfig
       run: |
         echo "new tag: '${{steps.dry_run.outputs.new_tag}}'"
+        echo "tag: '${{steps.dry_run.outputs.tag}}'"
         # process version.xcconfig
         curl --silent https://raw.githubusercontent.com/wireapp/wire-ios-shared-resources/master/Scripts/updateVersionXcconfig.swift --output updateVersionXcconfig.swift
         chmod +x updateVersionXcconfig.swift
