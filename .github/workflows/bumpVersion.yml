@@ -21,4 +21,5 @@ jobs:
         
     - name: update version.xcconfig
       run:
-        echo ${{join(steps.dry_run.outputs.*, '\n')}}
+        echo "new tag:"
+        echo ${{steps.dry_run.outputs.new_tag}}
