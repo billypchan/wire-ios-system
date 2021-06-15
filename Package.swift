@@ -16,11 +16,13 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "WireSystem",
-            dependencies: []),
+        .binaryTarget(
+                    name: "WireSystem",
+                    url: "https://github.com/billypchan/wire-ios-system/releases/download/32.0.21/WireSystem.xcframework.zip",
+                    checksum: "4c45de069f2b959e972fe567337fe82ae9d3b47ca7aa46fc0e09e77dfbd7f5ea"),
+//        .target(
+//            name: "WireSystem",
+//            dependencies: []),
         .testTarget(
             name: "WireSystem Tests",
             dependencies: ["WireSystem"]),
