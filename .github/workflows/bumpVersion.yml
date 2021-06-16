@@ -16,6 +16,8 @@ jobs:
       run: |
         echo "comment: '${{ github.event.head_commit.message }}'"
         echo "email: '${{ github.event.author.email }}'"
+        echo "committer email: '${{ github.event.committer.email }}'"
+        
 
     - name: Bump version and push tag, dry run to get the next tag
       uses: anothrNick/github-tag-action@1.26.0
