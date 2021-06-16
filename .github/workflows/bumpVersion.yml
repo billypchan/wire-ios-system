@@ -15,8 +15,8 @@ jobs:
     - name: guard for wire bot commit
       run: |
         echo "comment: '${{ github.event.head_commit.message }}'"
-        echo "email: '${{ github.event.author.email }}'"
-        echo "committer email: '${{ github.event.committer.email }}'"
+        echo "email: '${{ github.event.head_commit.author.email }}'"
+        echo "committer email: '${{ github.event.head_commit.committer.email }}'"
         
 
     - name: Bump version and push tag, dry run to get the next tag
