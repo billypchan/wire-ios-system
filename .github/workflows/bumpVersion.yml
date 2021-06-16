@@ -14,8 +14,8 @@ jobs:
 
     - name: guard for wire bot commit
       run: |
-        echo ${{ github.event.head_commit.message }}
-        echo ${{ github.event.author.email }}
+        echo "comment: '${{ github.event.head_commit.message }}'"
+        echo "email: '${{ github.event.author.email }}'"
 
     - name: Bump version and push tag, dry run to get the next tag
       uses: anothrNick/github-tag-action@1.26.0
