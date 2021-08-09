@@ -10,15 +10,15 @@ jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - id: comment
+#       - id: comment
       - uses: actions-ecosystem/action-create-comment@v1
         with:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}! Thx for approved the PR!
 
-      - name: checkout
-      - uses: actions/checkout@v2
+#       - name: checkout
+#       - uses: actions/checkout@v2
 
 #       - name: check status
 #         run: |
