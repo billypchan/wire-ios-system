@@ -8,8 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-create-comment@v1
-        if: ${{ startsWith(github.event.comment.body, '/hello') }}
+#         if: ${{ startsWith(github.event.comment.body, '/hello') }}
         with:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}!
+          run: |
+            gh pr status
