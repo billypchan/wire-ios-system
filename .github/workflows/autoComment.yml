@@ -1,6 +1,8 @@
 name: Create Comment when pull request approved or check run completed
 
-on: [issue_comment]
+on: 
+  issue_comment:
+  push:
 
 jobs:
   create_comment:
