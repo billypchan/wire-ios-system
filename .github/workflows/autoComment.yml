@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: status
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: gh pr status
 
 #       - name: comment
