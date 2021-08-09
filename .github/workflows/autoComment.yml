@@ -13,3 +13,5 @@ jobs:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}!
+          run: |
+            gh pr status
