@@ -1,6 +1,7 @@
 name: Create Comment when pull request approved or check run completed
 
 on: 
+  push:
   pull_request_review:
     types: [submitted]
   issue_comment:
