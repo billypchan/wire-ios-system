@@ -36,14 +36,6 @@ jobs:
           echo "::set-output name=SHA::$SHA"
       - name: checkout
         uses: actions/checkout@v2
-      - name: Create tag
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: "refs/tags/${{ steps.tag_version.outputs.new_tag }}",
-              sha: ${{ steps.developSha.outputs.SHA }}
-            })
+      - name: tag
+        run: |
+          git tag -a ${{ steps.tag_version.outputs.new_tag }} ${{ steps.developSha.outputs.SHA }} -m"tagged by github action"
