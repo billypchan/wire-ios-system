@@ -36,9 +36,10 @@ jobs:
           echo "::set-output name=SHA::$SHA"
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.developSha.outputs.SHA }}
       - name: tag
         run: |
-          git pull
           git log
           git status
           git tag -a ${{ steps.tag_version.outputs.new_tag }} ${{ steps.developSha.outputs.SHA }} -m"tagged by github action"
