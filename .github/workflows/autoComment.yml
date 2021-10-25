@@ -16,10 +16,10 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: gh pr status
 
-#       - name: comment
-#       - uses: actions-ecosystem/action-create-comment@v1
-# #         if: ${{ startsWith(github.event.comment.body, '/hello') }}
-#         with:
-#           github_token: ${{ secrets.github_token }}
-#           body: |
-#             Hello, @${{ github.actor }}!
+      - name: comment
+      - uses: actions-ecosystem/action-create-comment@v1
+#         if: ${{ startsWith(github.event.comment.body, '/hello') }}
+        with:
+          github_token: ${{ secrets.github_token }}
+          body: |
+            Hello, @${{ github.actor }}!
