@@ -17,7 +17,9 @@ jobs:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}! Merging PR for command **${{ github.event.comment.body}}**
-      - uses: actions/checkout@v2
-      - uses: maxkomarychev/merge-pal-action@v0.5.1
+      - name: Merge Pull Request
+        uses: juliangruber/merge-pull-request-action@v1
         with:
-          token: ${{ secrets.github_token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: 1
+          method: squash
