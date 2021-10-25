@@ -12,13 +12,12 @@ jobs:
       - name: guard for magic spell
         if: ${{ github.event.comment.body != 'release major'}}
         run: exit 1
-      - name: checkout
-        uses: actions/checkout@v2
       - uses: actions-ecosystem/action-create-comment@v1
         with:
           github_token: ${{ secrets.github_token }}
           body: |
-            Hello, @${{ github.actor }}! Merging PR for major release            
+            Hello, @${{ github.actor }}! Merging PR for command ${{ github.event.comment.body}}            
+      - name: checkout
       - uses: maxkomarychev/merge-pal-action@v0.5.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.github_token }}
