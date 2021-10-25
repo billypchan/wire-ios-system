@@ -34,6 +34,8 @@ jobs:
         run: |
           SHA=`git ls-remote ${{ github.event.repository.html_url}} develop | cut -f 1`
           echo "::set-output name=SHA::$SHA"
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Create tag
         uses: actions/github-script@v3
         with:
