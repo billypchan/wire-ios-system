@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - uses: actions-ecosystem/action-create-comment@v1
-        if: ${{ startsWith(github.event.comment.body, '/release minor') }}
+        if: ${{ startsWith(github.event.comment.body, '/release') }}
         with:
           github_token: ${{ secrets.github_token }}
           body: |
