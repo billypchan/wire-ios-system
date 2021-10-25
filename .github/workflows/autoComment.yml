@@ -41,6 +41,7 @@ jobs:
       - name: tag
         run: |
           git status
+          git config --global user.name "zenkins"
           git config --global user.email "iosx@wire.com"
           git tag -a ${{ steps.tag_version.outputs.new_tag }} ${{ steps.developSha.outputs.SHA }} -m"tagged by github action"
           git push origin ${{ steps.tag_version.outputs.new_tag }}
