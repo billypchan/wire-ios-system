@@ -8,6 +8,8 @@ on:
 jobs:
   create_comment:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: guard for magic spell
         if: ${{ github.event.comment.body != 'release major'}}
@@ -17,17 +19,12 @@ jobs:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}! Merging PR for command **${{ github.event.comment.body}}** for PR #**${{ github.event.issue.number }}**
-      - name: Merge Pull Request
-        uses: juliangruber/merge-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          number: ${{ github.event.issue.number }}
-          method: squash
+      - name: Merge Pull Request 
+        run: gh pr merge ${{ github.event.issue.number }} -s
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           tag_prefix: ''
-          append_to_pre_release_tag: ''
           release_branches: 'develop'
