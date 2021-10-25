@@ -1,4 +1,4 @@
-name: Create Comment when pull request approved or check run completed
+name: Merge PR v0.1
 
 on: 
   issue_comment:
@@ -9,18 +9,14 @@ jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-#       - name: status
-#         env:
-#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-#         run: gh pr status
-
-      - name: comment
+      - name: guard for magic spell
+        if: ${{ github.event.comment.body != 'release major'}}
+        run: exit 1
       - uses: actions-ecosystem/action-create-comment@v1
-        if: ${{ startsWith(github.event.comment.body, '/release minor') }}
         with:
           github_token: ${{ secrets.github_token }}
           body: |
-            Hello, @${{ github.actor }}!
+            Hello, @${{ github.actor }}! Merging PR for command **${{ github.event.comment.body}}**
+      - uses: maxkomarychev/merge-pal-action@v0.5.1
+        with:
+          token: ${{ secrets.github_token }}
