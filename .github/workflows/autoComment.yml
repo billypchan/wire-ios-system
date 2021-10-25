@@ -1,14 +1,25 @@
-name: Create Comment
+name: Create Comment when pull request approved or check run completed
 
-on: [issue_comment]
+on: 
+  issue_comment:
+  #for debug only
+  push:
 
 jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v2
+
+#       - name: status
+#         env:
+#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#         run: gh pr status
+
+      - name: comment
       - uses: actions-ecosystem/action-create-comment@v1
-        if: ${{ startsWith(github.event.comment.body, '/hello') }}
+        if: ${{ startsWith(github.event.comment.body, '/release minor') }}
         with:
           github_token: ${{ secrets.github_token }}
           body: |
