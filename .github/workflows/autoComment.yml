@@ -10,7 +10,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: guard for magic spell
-        if: ${{ github.event.comment.body != 'release major' || github.event.comment.body != 'release minor' || github.event.comment.body != 'release patch'}}
+        if: ${{ github.event.comment.body != 'release major' && github.event.comment.body != 'release minor' && github.event.comment.body != 'release patch'}}
         run: exit 1
       - name: get release type
         id: releaseType
