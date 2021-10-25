@@ -19,7 +19,6 @@ jobs:
           github_token: ${{ secrets.github_token }}
           body: |
             Hello, @${{ github.actor }}! Merging PR for major release            
-      - name: Merge me!
-        uses: ridedott/merge-me-action@v2
+      - uses: maxkomarychev/merge-pal-action@v0.5.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
