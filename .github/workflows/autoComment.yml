@@ -3,7 +3,7 @@ name: Merge PR v0.1
 on: 
   issue_comment:
   #for debug only
-  push:
+#   push:
 
 jobs:
   create_comment:
