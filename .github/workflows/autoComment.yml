@@ -31,4 +31,14 @@ jobs:
           dry_run: 'true'
       - name: tag the merged commit
         run: echo ${{ steps.tag_version.outputs.new_tag }}
-
+      - name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/${{ steps.tag_version.outputs.new_tag }}",
+              sha: context.sha
+            })
