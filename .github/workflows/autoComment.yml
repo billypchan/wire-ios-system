@@ -9,9 +9,9 @@ jobs:
   create_comment:
     runs-on: ubuntu-latest
     steps:
-      - name: condition 1
+      - name: guard for magic spell
         if: ${{ github.event.comment.body != 'release major'}}
-        run: exit(1)
+        run: exit 1
       - name: checkout
         uses: actions/checkout@v2
       - uses: actions-ecosystem/action-create-comment@v1
