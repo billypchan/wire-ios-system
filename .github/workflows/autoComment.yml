@@ -16,8 +16,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           body: |
-            Hello, @${{ github.actor }}! Merging PR for command ${{ github.event.comment.body}}            
-      - name: checkout
+            Hello, @${{ github.actor }}! Merging PR for command **${{ github.event.comment.body}}**
       - uses: maxkomarychev/merge-pal-action@v0.5.1
         with:
           token: ${{ secrets.github_token }}
