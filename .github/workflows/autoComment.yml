@@ -38,6 +38,7 @@ jobs:
         uses: actions/checkout@v2
       - name: tag
         run: |
+          git pull
           git log
           git status
           git tag -a ${{ steps.tag_version.outputs.new_tag }} ${{ steps.developSha.outputs.SHA }} -m"tagged by github action"
