@@ -11,13 +11,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-
-#       - name: status
-#         env:
-#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-#         run: gh pr status
-
-      - name: comment
       - uses: actions-ecosystem/action-create-comment@v1
         if: ${{ startsWith(github.event.comment.body, '/release minor') }}
         with:
