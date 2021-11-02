@@ -21,7 +21,7 @@ jobs:
             "orange"
           ]
           
-
+    steps:
     - name: check juice
       if: contains(env.JUICE, 'apple')
       run: |
