@@ -27,12 +27,17 @@ jobs:
       run: |
         echo "Found Juice"
 
+    - name: check juice full
+      if: contains(${{ env.JUICE }}, 'apple-juice')
+      run: |
+        echo "Found Juice Full"
+
     - name: check fruit
       if: ${{ contains(env.FRUIT, 'apple') }}
       run: |
         echo "Found Fruit"
 
-    - name: check fruit
-      if: ${{ contains(env.FRUIT, 'mange') }}
+    - name: check mango
+      if: ${{ contains(env.FRUIT, 'mango') }}
       run: |
         echo "Found mango"
