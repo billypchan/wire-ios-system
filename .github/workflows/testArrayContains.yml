@@ -20,7 +20,15 @@ jobs:
             "apple",
             "orange"
           ]
-          
+        ADMINS: |
+          ['billypchan',
+          'marcoconti83',
+          'typfel',
+          'johnxnguyen',
+          'David-Henner',
+          'KaterinaWire'
+          ]
+
     steps:
     - name: check juice
       if: contains(${{ env.JUICE }}, 'apple')
@@ -41,3 +49,14 @@ jobs:
       if: ${{ contains(env.FRUIT, 'mango') }}
       run: |
         echo "Found mango"
+
+    - name: check admins
+      if: ${{ contains(env.ADMINS, 'billyphcan') }}
+      run: |
+        echo "Found billyphcan"
+
+
+    - name: check admins
+      if: ${{ contains(env.ADMINS, 'billy') }}
+      run: |
+        echo "Found billy"
