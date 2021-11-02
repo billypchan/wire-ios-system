@@ -51,9 +51,9 @@ jobs:
         echo "Found mango"
 
     - name: check admins
-      if: ${{ contains(env.ADMINS, 'billyphcan') }}
+      if: ${{ contains(env.ADMINS, 'billypchan') }}
       run: |
-        echo "Found billyphcan"
+        echo "Found billypchan"
 
 
     - name: check admins
