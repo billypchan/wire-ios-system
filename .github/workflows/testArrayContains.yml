@@ -60,3 +60,10 @@ jobs:
       if: ${{ contains(env.ADMINS, 'billy') }}
       run: |
         echo "Found billy"
+
+    - name: check admins 3
+      run: |
+          for i in "${{ env.ADMINS }}"
+          do
+            echo $i
+          done
