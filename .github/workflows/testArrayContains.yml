@@ -1,0 +1,33 @@
+name: My action
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+        JUICE: |
+          [
+            "apple-juice",
+            "orange-juice"
+          ]
+        FRUIT: |
+          [
+            "apple",
+            "orange"
+          ]
+          
+
+    - name: check juice
+      if: contains(env.JUICE, 'apple')
+      run: |
+        echo "Found Juice"
+
+    - name: check fruit
+      if: contains(env.FRUIT, 'apple')
+      run: |
+        echo "Found Fruit"
