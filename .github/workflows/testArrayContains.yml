@@ -21,14 +21,7 @@ jobs:
             "apple",
             "orange"
           ]
-        ADMINS: |
-          ('billypchan',
-          'marcoconti83',
-          'typfel',
-          'johnxnguyen',
-          'David-Henner',
-          'KaterinaWire'
-          )
+        ADMINS: ('billypchan', 'marcoconti83', 'typfel', 'johnxnguyen', 'David-Henner', 'KaterinaWire')
 
     steps:
     - name: check juice
@@ -54,7 +47,7 @@ jobs:
 
     - name: check admins 3
       run: |
-          for i in ${{ env.ADMINS }}
+          for i in ${!${{ env.ADMINS }}[*]}
           do
             echo $i
             if ["$i" == "billypchan"]; then
