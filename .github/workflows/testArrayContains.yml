@@ -21,7 +21,7 @@ jobs:
             "apple",
             "orange"
           ]
-        ADMINS: ('billypchan', 'marcoconti83', 'typfel', 'johnxnguyen', 'David-Henner', 'KaterinaWire')
+        ADMINS: ('billypchan' 'marcoconti83' 'typfel' 'johnxnguyen' 'David-Henner' 'KaterinaWire')
 
     steps:
     - name: check juice
@@ -50,8 +50,9 @@ jobs:
           array=${{ env.ADMINS }}
           for i in ${array[*]}
           do
-            echo $i
-            if ["$i" == "billypchan"]; then
+            admin=${array[$i]}
+            echo $admin
+            if [$admin == "billypchan"]; then
               echo "Found billypchan in 1"
               echo $i
             fi
