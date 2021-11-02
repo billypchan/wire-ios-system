@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
         JUICE: |
-          [
-            "apple-juice",
+          (
+            "apple-juice"
             "orange-juice"
-          ]
+          )
         FRUIT: |
           [
             "apple",
@@ -24,6 +24,20 @@ jobs:
         ADMINS: ('billypchan' 'marcoconti83' 'typfel' 'johnxnguyen' 'David-Henner' 'KaterinaWire')
 
     steps:
+    - name: check juice with bash
+      run: |
+          array=${{ env.JUICE }}
+          for item in ${array[*]}
+          do
+            if [[ "$item" == "apple" ]]; then
+              echo "Found Juice"
+            fi
+
+            if [[ "$item" == "apple-juice" ]]; then
+              echo "Found Juice Full Name"
+            fi
+          done
+
     - name: check juice
       if: contains(${{ env.JUICE }}, 'apple')
       run: |
