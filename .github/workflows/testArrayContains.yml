@@ -56,11 +56,13 @@ jobs:
       run: |
           for i in "${{ env.ADMINS }}"
           do
-            if $i == "billypchan"
+            if [[$i == "billypchan"]]; then
+              echo "Found billypchan in 1"
               echo $i
             fi
 
-            if $i == "billy"
+            if [[$i == "billy"]]; then
+              echo "Found billy in 2"
               echo $i
             fi
           done
