@@ -36,11 +36,6 @@ jobs:
       run: |
         echo "Found Juice"
 
-    - name: check fruit
-      if: ${{ contains(env.FRUIT, 'apple') }}
-      run: |
-        echo "Found Fruit"
-
     - name: check mango
       if: ${{ contains(env.FRUIT, 'mango') }}
       run: |
@@ -61,5 +56,11 @@ jobs:
       run: |
           for i in "${{ env.ADMINS }}"
           do
-            echo $i
+            if $i == "billypchan"
+              echo $i
+            fi
+
+            if $i == "billy"
+              echo $i
+            fi
           done
