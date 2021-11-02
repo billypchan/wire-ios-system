@@ -1,4 +1,4 @@
-name: My action
+name: array check test
 
 on:
   workflow_dispatch:
@@ -22,13 +22,13 @@ jobs:
             "orange"
           ]
         ADMINS: |
-          ['billypchan',
+          ('billypchan',
           'marcoconti83',
           'typfel',
           'johnxnguyen',
           'David-Henner',
           'KaterinaWire'
-          ]
+          )
 
     steps:
     - name: check juice
