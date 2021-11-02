@@ -50,8 +50,8 @@ jobs:
           array=${{ env.ADMINS }}
           for admin in ${array[*]}
           do
-              echo $admin
-            if [$admin = "billypchan"]; then
+            echo $admin
+            if ["$admin" = "billypchan"]; then
               echo "Found billypchan in 1"
               echo $admin
             fi
