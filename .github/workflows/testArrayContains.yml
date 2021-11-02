@@ -23,11 +23,11 @@ jobs:
           
     steps:
     - name: check juice
-      if: contains(env.JUICE, 'apple')
+      if: ${{ contains(env.JUICE, 'apple') }}
       run: |
         echo "Found Juice"
 
     - name: check fruit
-      if: contains(env.FRUIT, 'apple')
+      if: ${{ contains(env.FRUIT, 'apple') }}
       run: |
         echo "Found Fruit"
