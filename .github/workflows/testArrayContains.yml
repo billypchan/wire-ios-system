@@ -31,3 +31,8 @@ jobs:
       if: ${{ contains(env.FRUIT, 'apple') }}
       run: |
         echo "Found Fruit"
+
+    - name: check fruit
+      if: ${{ contains(env.FRUIT, 'mange') }}
+      run: |
+        echo "Found mango"
