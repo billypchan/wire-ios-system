@@ -47,7 +47,8 @@ jobs:
 
     - name: check admins 3
       run: |
-          for i in ${!${{ env.ADMINS }}[*]}
+          array=${{ env.ADMINS }}
+          for i in ${array[*]}
           do
             echo $i
             if ["$i" == "billypchan"]; then
