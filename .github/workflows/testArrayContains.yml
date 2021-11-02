@@ -54,7 +54,7 @@ jobs:
 
     - name: check admins 3
       run: |
-          for i in "${{ env.ADMINS }}"
+          for i in ${{ env.ADMINS }}
           do
             echo $i
             if ["$i" == "billypchan"]; then
