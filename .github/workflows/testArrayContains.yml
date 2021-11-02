@@ -1,6 +1,7 @@
 name: My action
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - '**'
@@ -34,11 +35,6 @@ jobs:
       if: contains(${{ env.JUICE }}, 'apple')
       run: |
         echo "Found Juice"
-
-    - name: check juice full
-      if: contains(${{ env.JUICE }}, 'apple-juice')
-      run: |
-        echo "Found Juice Full"
 
     - name: check fruit
       if: ${{ contains(env.FRUIT, 'apple') }}
