@@ -48,14 +48,12 @@ jobs:
     - name: check admins 3
       run: |
           array=${{ env.ADMINS }}
-          for i in ${array[*]}
+          for admin in ${array[*]}
           do
-            admin=${array[$i]}
-            echo $admin
-            if [$admin == "billypchan"]; then
+              echo $admin
+            if [$admin = "billypchan"]; then
               echo "Found billypchan in 1"
-              echo $i
+              echo $admin
             fi
-
 
           done
