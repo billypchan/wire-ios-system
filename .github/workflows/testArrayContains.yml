@@ -51,7 +51,7 @@ jobs:
           for admin in ${array[*]}
           do
             echo $admin
-            if [[$admin == "billypchan"]]; then
+            if [[ "$admin" == "billypchan" ]]; then
               echo "Found billypchan in 1"
               echo $admin
             fi
